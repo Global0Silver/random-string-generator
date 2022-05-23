@@ -9,6 +9,6 @@ Allows to disable fade colour so that its faster (fade colour can slow down the 
 # Requirements
 pip install pystyle
 
-# Recommendations
+#  Recommendations
 Use https://replit.com/~ to speed up the script
 Disable the colored text for faster results
