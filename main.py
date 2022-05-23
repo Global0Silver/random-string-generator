@@ -29,7 +29,7 @@ print ("Lowercase >2")
 print ("Uppercase >3")
 cases = int(input(">"))
 lol = input("numbers? [y/n]\n>")
-optimized = input("coloured text?[y/n](might be slower)\n>") 
+optimized = input("colored text?[y/n](might be slower)\n>") 
 value = 1
 startTime = time.time()
 if lol == "y" and cases < 2:
