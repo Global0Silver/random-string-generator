@@ -1,5 +1,5 @@
 # random-string-generator
-generates random strings and saves it in a txt file
+ generates random strings and saves it in a txt file
 
 # Features
 Put any text in front of the generated text
