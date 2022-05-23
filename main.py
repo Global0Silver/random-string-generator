@@ -18,6 +18,7 @@ intro =  """
       ░     ░  ░    ░ ░   ░            ░  ░    ░  ░         ░   ░      ░  ░   ░     ░  ░   ░     
                                ░                                             ░                   
 """
+#made by globalsilver#9994
 print(Colorate.Vertical(Colors.blue_to_purple, intro, 1))
 infront = input("What do u want to be in front of the generated strings:")
 amount = int(input('Amount of strings to generate: '))
