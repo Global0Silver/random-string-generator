@@ -12,7 +12,7 @@ Allows to disable fade colour so that its faster (fade colour can slow down the 
 pip install pystyle
 
 #  Recommendations
-Use https://replit.com/ to speed up the script
+Use [https://replit.com/](https://replit.com/@globalalt/random-string-gen) to speed up the script
 
 Disable the colored text for faster results
 
