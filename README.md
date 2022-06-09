@@ -9,7 +9,7 @@ Allows you to select if you want lowercase letter or uppercase letters or both
 Allows to disable fade colour so that its faster (fade colour can slow down the speed if you dont have a good gpu)
 
 # Requirements
-python 3
+python 3 installed
 
 pip install pystyle
 
