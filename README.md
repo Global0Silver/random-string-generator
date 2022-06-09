@@ -10,6 +10,7 @@ Allows to disable fade colour so that its faster (fade colour can slow down the 
 
 # Requirements
 python 3
+
 pip install pystyle
 
 
