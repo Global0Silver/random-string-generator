@@ -11,6 +11,8 @@ Allows to disable fade colour so that its faster (fade colour can slow down the 
 # Requirements
 pip install pystyle
 
+python 3
+
 #  Recommendations
 Use [https://replit.com/](https://replit.com/@globalalt/random-string-gen) to speed up the script
 
