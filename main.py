@@ -18,130 +18,63 @@ intro =  """
       ░     ░  ░    ░ ░   ░            ░  ░    ░  ░         ░   ░      ░  ░   ░     ░  ░   ░     
                                ░                                             ░                   
 """
-# made by globalsilver#9994
 print(Colorate.Vertical(Colors.blue_to_purple, intro, 1))
-infront = input("What do u want to be in front of the generated strings:")
-amount = int(input('Amount of strings to generate: '))
-lenght = int(input('string lenght:'))
-letters= input("Letters?(y/n)>")
+infront = input("Enter a string to be put before the generated text:")
+#input loops to check if a valid number has been entered
+while True:
+ amount = input('Amount of strings to generate: ')
+ if amount.isnumeric() == True:
+  break
+ else:
+  print ("Please enter a valid number")
+while True:
+    lenght = input('string lenght:')
+    if lenght.isnumeric() == True:
+     break
+    else:
+     print ("Please enter a valid number")
+
+  
 clear()
-if letters == "y":
- print ("select what type of letters you want to be in the string")
- print ("Both      >1")
- print ("Lowercase >2")
- print ("Uppercase >3")
- cases = int(input(">"))
-if letters == "y":
- lol = input("numbers? [y/n]\n>")
-optimized = input("coloured text?[y/n](might be slower)\n>") 
+#cases system
+print ("select what type of letters you want to be in the string (leave blank for no letters")
+print ("Both      >1")
+print ("Lowercase >2")
+print ("Uppercase >3")
+cases = input(">")
+if cases == "1":
+ prnt_cases = string.ascii_letters
+elif cases == "2":
+ prnt_cases = string.ascii_lowercase
+elif cases == "3":
+ prnt_cases = string.ascii_uppercase
+else:
+ prnt_cases = string.digits # if none selected generate numbers instead
+ 
+#number system
+inp_numbers = input("numbers? [y/n]\n>")
+if inp_numbers == "y":
+ prnt_numbers = string.digits
+else:
+ prnt_numbers = ""
+ 
+colorfull = input("coloured text?[y/n](might be slower but cooler)\n>") 
 value = 1
 startTime = time.time()
+f = open('Strings.txt', "a+") #opens the txt file
 
-if letters == "n":
- cases = 0
- lol = "lol"
-
-if lol == "y" and cases < 2:
-  while value <= amount:
+while value <= int(amount): # main part
    code = infront + ('').join(
-   random.choices(string.ascii_letters + string.digits, k=lenght ))
-   f = open('Strings.txt', "a+")
+   random.choices(prnt_cases + prnt_numbers, k=int(lenght) ))
    f.write(f'{code}\n')
-   f.close()
-   if optimized == "y":
+   if colorfull == "y":
     print(Colorate.Horizontal(Colors.purple_to_red,(f'[GENERATED] {code}')))
    else:
     print (f'[GENERATED] {code}')
-   value += 1
-   system(f'title {value}/{amount}')
-   
-   
+   print (str(value) + "/" + amount ,end = "\r")
+   value += 1 
 
-if lol == "y" and cases < 3:
-  while value <= amount:
-   code = infront + ('').join(
-   random.choices(string.ascii_lowercase + string.digits, k=lenght ))
-   f = open('Strings.txt', "a+")
-   f.write(f'{code}\n')
-   f.close()
-   if optimized == "y":
-    print(Colorate.Horizontal(Colors.purple_to_red,(f'[GENERATED] {code}')))
-   else:
-    print (f'[GENERATED] {code}')
-   value += 1
-   system(f'title {value}/{amount}')
-
-if lol == "y" and cases < 4:
-  while value <= amount:
-   code = infront + ('').join(
-   random.choices(string.ascii_uppercase + string.digits , k=lenght ))
-   f = open('Strings.txt', "a+")
-   f.write(f'{code}\n')
-   f.close()
-   if optimized == "y":
-    print(Colorate.Horizontal(Colors.purple_to_red,(f'[GENERATED] {code}')))
-   else:
-    print (f'[GENERATED] {code}')
-   value += 1
-   system(f'title {value}/{amount}')
-   
-if lol == "n" and cases < 2:
-  while value <= amount:
-   code = infront + ('').join(
-   random.choices(string.ascii_letters, k=lenght ))
-   f = open('Strings.txt', "a+")
-   f.write(f'{code}\n')
-   f.close()
-   if optimized == "y":
-    print(Colorate.Horizontal(Colors.purple_to_red,(f'[GENERATED] {code}')))
-   else:
-    print (f'[GENERATED] {code}')
-   value += 1
-   system(f'title {value}/{amount}')
-   
-if lol == "n" and cases < 3:
-  while value <= amount:
-   code = infront + ('').join(
-   random.choices(string.ascii_lowercase, k=lenght ))
-   f = open('Strings.txt', "a+")
-   f.write(f'{code}\n')
-   f.close()
-   if optimized == "y":
-    print(Colorate.Horizontal(Colors.purple_to_red,(f'[GENERATED] {code}')))
-   else:
-    print (f'[GENERATED] {code}')
-   value += 1
-   system(f'title {value}/{amount}')
-
-if lol == "n" and cases < 4:
-  while value <= amount:
-   code = infront + ('').join(
-   random.choices(string.ascii_uppercase, k=lenght ))
-   f = open('Strings.txt', "a+")
-   f.write(f'{code}\n')
-   f.close()
-   if optimized == "y":
-    print(Colorate.Horizontal(Colors.purple_to_red,(f'[GENERATED] {code}')))
-   else:
-    print (f'[GENERATED] {code}')
-   value += 1
-   system(f'title {value}/{amount}')
-
-if letters == "n":
-  while value <= amount:
-   code = infront + ('').join(
-   random.choices(string.digits, k=lenght ))
-   f = open('Strings.txt', "a+")
-   f.write(f'{code}\n')
-   f.close()
-   if optimized == "y":
-    print(Colorate.Horizontal(Colors.purple_to_red,(f'[GENERATED] {code}')))
-   else:
-    print (f'[GENERATED] {code}')
-   value += 1
-   system(f'title {value}/{amount}')
-
-
-print(Colorate.Color(Colors.green, "Done", True))
+print(Colorate.Color(Colors.green, "\nDone", True))
 executionTime = (time.time() - startTime)
 print('It took ' + str(round(executionTime, 2)) + ' seconds to generate '+ str(amount) + ' strings')
+f.close()#exits out of the txt file
