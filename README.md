@@ -15,8 +15,6 @@ pip install pystyle
 
 
 #  Recommendations
-~~Use [https://replit.com/](https://replit.com/@globalalt/random-string-gen) to speed up the script~~
-
 Disable the colored text for faster results
 
 # Preview
